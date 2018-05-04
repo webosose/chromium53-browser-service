@@ -19,3 +19,10 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.3)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/conf.d/cmake/config.cmake)
+
+add_custom_command(OUTPUT ${PROJECT_PKG_BUILD_DIR}/runxdg.toml
+  COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/runxdg.toml ${PROJECT_PKG_BUILD_DIR}/runxdg.toml
+)
+
+add_custom_target(runxdg_toml DEPENDS ${PROJECT_PKG_BUILD_DIR}/runxdg.toml)
+add_dependencies(widget runxdg_toml)

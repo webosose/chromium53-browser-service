@@ -1,0 +1,18 @@
+[application]
+# role: identifier for WindowManager (used in layers.json)
+# e.g. role = "WebBrowser"
+role = "WebBrowser"
+
+# launch by "POSIX"(fork/exec), "AFM_DBUS"(afm via dbus),  "AFM_WEBSOCKET"(afm via websockt)
+method = "POSIX"
+
+# path: path to the executable
+# e.g.
+#   path = "/usr/bin/chromium"
+path = "/opt/chromium53/chrome"
+
+params = [
+  "--in-process-gpu",
+  "--user-data-dir=/opt/chromium53/workdir"
+]
+
