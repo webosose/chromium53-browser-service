@@ -154,7 +154,7 @@ set(WIDGET_TYPE application/vnd.agl.native)
 # This is the file that will be executed, loaded,
 # at launch time by the application framework.
 #
-set(WIDGET_ENTRY_POINT /usr/bin/runxdg)
+set(WIDGET_ENTRY_POINT bin/runxdg)
 
 # Optional dependencies order
 # ---------------------------

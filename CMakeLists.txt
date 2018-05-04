@@ -26,3 +26,11 @@ add_custom_command(OUTPUT ${PROJECT_PKG_BUILD_DIR}/runxdg.toml
 
 add_custom_target(runxdg_toml DEPENDS ${PROJECT_PKG_BUILD_DIR}/runxdg.toml)
 add_dependencies(widget runxdg_toml)
+
+add_custom_command(OUTPUT ${PACKAGE_BINDIR}/runxdg
+  COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/runxdg.sh ${PACKAGE_BINDIR}/runxdg
+  COMMAND chmod +x ${PACKAGE_BINDIR}/runxdg
+)
+
+add_custom_target(runxdg_script DEPENDS ${PACKAGE_BINDIR}/runxdg)
+add_dependencies(widget runxdg_script)
