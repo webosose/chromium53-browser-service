@@ -1,7 +1,8 @@
 [application]
 # role: identifier for WindowManager (used in layers.json)
 # e.g. role = "WebBrowser"
-role = "WebBrowser"
+#role = "WebBrowser"
+role = "browser"
 
 # launch by "POSIX"(fork/exec), "AFM_DBUS"(afm via dbus),  "AFM_WEBSOCKET"(afm via websockt)
 method = "POSIX"
