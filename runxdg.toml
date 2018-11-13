@@ -14,6 +14,7 @@ path = "/opt/chromium53/chrome"
 
 params = [
   "--in-process-gpu",
-  "--user-data-dir=/opt/chromium53/workdir"
+  "--user-data-dir=/opt/chromium53/workdir",
+  "--window-size=608,837"
 ]
 
